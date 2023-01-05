@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2_funktionel_programmering", "M2_funktionel_programmering\M2_funktionel_programmering.csproj", "{EBBEB0B2-289B-4CCE-9452-FE420BBB2943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoúbleSort", "BoúbleSort\BoúbleSort.csproj", "{ABB49FD7-B859-437B-A175-B091742A88B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBBEB0B2-289B-4CCE-9452-FE420BBB2943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBEB0B2-289B-4CCE-9452-FE420BBB2943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBEB0B2-289B-4CCE-9452-FE420BBB2943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBEB0B2-289B-4CCE-9452-FE420BBB2943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB49FD7-B859-437B-A175-B091742A88B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB49FD7-B859-437B-A175-B091742A88B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB49FD7-B859-437B-A175-B091742A88B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB49FD7-B859-437B-A175-B091742A88B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53D1057F-FA35-42A0-9554-4E10D6C94C58}
+	EndGlobalSection
+EndGlobal

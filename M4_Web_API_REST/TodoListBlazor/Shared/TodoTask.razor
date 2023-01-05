@@ -1,0 +1,28 @@
+@using TodoListBlazor.Data;
+
+<!-- Injecter servicen ToDoListService og navngiver den TodoService som gør at vi kan bruge servicen via dette navn-->
+@inject TodoListService todoService
+
+<!-- Når man klikker checkbox af bliver HandleDone metoden kaldt-->
+<input id=@Task.Id type="checkbox" checked=@Task.Done @onchange="HandleDone" />
+<label htmlFor=@Task.Id>@Task.Text</label>
+
+@code {
+    [Parameter]
+    public TaskData Task { get; set; }
+
+    // HandleDone har en en ChangeEventArgs parameter - som vi her kalder e.
+    // Hvis e.value ikke er lig null og e.value er en bool, så sættes newValue lig e.Value.
+    // Når tasken så bliver sat til done(altså krydset af på siden) sættes den lig den nye value (som så altså er done)
+    // Metoden fra todoService PutTaskData bliver kaldt på Task, hvilket opdaterer dataene på tasken og den vises derfor som krydset af på siden */
+
+    private void HandleDone(ChangeEventArgs e)
+    {
+        if (e.Value != null && e.Value is bool)
+        {
+            bool newValue = (bool)e.Value;
+            Task.Done = newValue;
+            todoService.PutTaskData(Task);
+        }
+    }
+}

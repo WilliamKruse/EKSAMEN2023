@@ -1,0 +1,24 @@
+@using TodoListBlazor.Data;
+
+<!-- Injecter servicen ToDoListService og navngiver den TodoService som gør at vi kan bruge servicen via dette navn-->
+@inject TodoListService todoService
+
+<!--Man binder værdien af taskText som input, og når man trykker på knappen Add task bliver metoden PostNewTask kørt.
+    Hvis taskText er null oprettes der ikke en task.
+    Hvis den indeholder en task bliver PostTask metoden fra servicen TodoListService kaldt (navnet her er TodoService som vi har givet den navnet øverst på siden da vi injectede servicen)
+    og opretter tasken.-->
+
+<input type="input" id="taskText" @bind-value="taskText"/>
+<button id="addTaskButton" type="button" @onclick="PostNewTask" >Add Task</button>
+
+@code {
+    private string? taskText;
+    private void PostNewTask()
+    {
+        if (taskText is null)
+        {
+            return;
+        }
+        todoService.PostTask(new TaskData() { Text = taskText, Done = false });
+    }
+}
